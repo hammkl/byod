@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script> 
+	<script src="js/lip.js"></script> <!-- our stuff, add last -->	
+     
+<style type="text/css">
+ 
+</style>
+</head>
+<body>
+
+
+  <label id="inputLabel_1" for="inputTags_1">Input</label>
+	<input type="text" name="entry_1" value="" id="inputTags_1" style="width:100%" />
+    <label id="inputLabel_2" for="inputTags_2">HASH</label>
+	<input type="text" name="entry_2" value="" id="inputTags_2" style="width:100%" />
+   <label id="inputLabel_3" for="inputTags_3">URL</label>
+	<input type="text" name="entry_3" value="" id="inputTags_3" style="width:100%" />
+
+<script type="text/javascript">
+try {
+
+	
+	$( "#inputTags_1" ).focusout(function() {
+		var parts = $(this).val().split(";");
+		var leng = parts.length-1;
+		var fCount = parseInt(parts[0]);
+		var fIdx = 1;
+		var output = new Array();
+		for (var i = 0; i < leng; i++) {
+			if ((i < fCount) || (parts[i+1].length > 0))
+			  output.push( fIdx + ":" + hash(parts[i+1]).toString());
+			fIdx ++;
+			if (fIdx > fCount) fIdx = 1;
+		}
+		var enc = output.join(",");
+		$( "#inputTags_2" ).val(enc);
+		$( "#inputTags_3" ).val(encodeURIComponent($(this).val()));
+	});
+
+} catch (err) {
+	alert(err);
+}		
+</script>
+</body></html>
