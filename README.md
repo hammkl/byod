@@ -1,5 +1,5 @@
 # BYOD 2 school
-Bring Your Own Device 2 School shall help overcoming the resource stress in public (and private) schooling by using ICT equipment already available. This project is partially funded by http://netidee.at
+Bring Your Own Device 2 School shall help overcoming the resource stress in public (and private) schooling by using ICT equipment already available. This project is substantially funded by http://netidee.at
 
 The news can be fount on our blog http://byod2school.blogspot.co.at
 
